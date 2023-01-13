@@ -18,7 +18,7 @@ class Department
     @expenses += new_expense_amount
   end
 
-  # Iteration 4 - PSEUDO CODE: 
+  # PSEUDOCODE: 
   # make a .make_expense method to employee class? as an attribute?
   #=> no, they would not have this by default (ie before they were hired)
 
@@ -46,4 +46,5 @@ class Department
   #=> no, departments can have their own expenses, while employees can make expenses for the dept too
 
   # I feel like I'm overcomplicating this.
+  # Just Learned: we are allowed to refactor previous methods and modify the tests accordingly
 end
