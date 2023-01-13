@@ -41,7 +41,7 @@ RSpec.describe Department do
     expect(customer_service.expenses).to eq(0)
   end
 
-  it "can add an #expense to it's expenses" do
+  it "can add an #expense to its expenses" do
     customer_service = Department.new("Customer Service") 
     
     bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
