@@ -1,10 +1,10 @@
 class Budget
 	attr_reader :year,
-              :all_departments
+              :departments
 	
 	def initialize(year)
 				@year = year.to_i
-        @all_departments = []
+        @departments = []
 	end
 
 end
