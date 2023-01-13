@@ -9,7 +9,7 @@ RSpec.describe Employee do
       expect(bobbi).to be_instance_of(Employee)
     end
 
-		it "has atrributes" do
+		it "has attributes" do
       bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "$100000"})
 
 			expect(bobbi.name).to eq("Bobbi Jaeger")
