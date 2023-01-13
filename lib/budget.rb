@@ -7,4 +7,8 @@ class Budget
         @departments = []
 	end
 
+  def add_department(department)
+    departments.push(department)
+  end
+
 end
