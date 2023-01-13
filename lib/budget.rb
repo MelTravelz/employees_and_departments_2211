@@ -18,7 +18,19 @@ class Budget
   end
 
   def employee_salaries
-    require 'pry'; binding.pry
+    hash = Hash.new(0)
+
+    departments.each do |dept|
+      dept.employees.each do |employee|
+        hash[employee] = employee.salary
+      end
+    end
+
+    hash
+
+    # require 'pry'; binding.pry
+    # departments[0].employees[0] => employee object
+    # departments[0].employees[0].salary => 200000
   end
-  
+
 end
