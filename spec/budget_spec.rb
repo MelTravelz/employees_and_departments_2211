@@ -51,7 +51,7 @@ RSpec.describe Budget do
     expect(budget.low_expense_departments).to eq([customer_service, social_service])
   end
 
-  it "can list #add_salaries employees" do
+  it "can list all #employee_salaries" do
     budget = Budget.new("2022") 
       
     customer_service = Department.new("Customer Service")   
@@ -76,8 +76,8 @@ RSpec.describe Budget do
       ben => 250000,
       saul => 200000
     }
-    expect(budget.all_salaries).to eq(expected)
-    # expect(budget.all_salaries).to eq([100000, 90000, 250000, 200000])
+    expect(budget.employee_salaries).to eq(expected)
+    # expect(budget.employee_salaries).to eq([100000, 90000, 250000, 200000])
   end
 
 
