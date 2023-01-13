@@ -9,4 +9,8 @@ class Employee
     @salary = info[:salary].delete_prefix("$").to_i
 	end
 
+  def give_raise(raise_amount)
+    @salary += raise_amount
+    return self
+  end
 end
