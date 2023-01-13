@@ -17,6 +17,7 @@ RSpec.describe Budget do
     expect(budget.year).to eq(2022)
     expect(budget.departments).to eq([])
   end
+  # design choice to change year to integer in case other calculation might be needed between years
 
   it "can #add_department to its departments" do
     budget = Budget.new("2022") 
