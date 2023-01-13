@@ -1,7 +1,8 @@
 class Department
 	attr_reader :name,
-              :employees,
-              :expenses
+              :employees
+
+  attr_accessor :expenses
 	
 	def initialize(name)
     @name = name
@@ -14,7 +15,7 @@ class Department
   end
 
   def expense(new_expense_amount)
-    @expenses += new_expense_amount
+    @expenses += new_expense_amount.delete_prefix("$").to_i
   end
 
   
