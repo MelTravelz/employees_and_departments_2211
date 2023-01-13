@@ -26,19 +26,24 @@ class Department
   # [empolyee, expense_amount] ex: [bobbi, 100]
   #=> no, this doesn't do anything functional
 
+  # or can we use #expense method somewhere? 
+  #=> no, departments can have their own expenses, while employees can make expenses for the dept too
+
   # make .add_employee_expense for the department class (similar to #expense)
   # customer_service.add_employee_expense([bobbi, 100])
   #  inside this method it would  @expenses += index[1]
 
-  # however, how to we keep/list the [employee, amount] array? A dept would track this.
+  # however, how to we keep a list the [employee, amount] array? A dept would track this.
+  # ok... make an [ array of [array elements]] so add_employee_expense([bobbi, 100])
+  # would add that array element into an attribute array holding all expenses_by_empolyee ?
+  # you'd also have to be able to add new expenses made by the same employee (maybe it would be easier as hash?)
+  # then make another helper that sums up all expenses and adds to expenses 
+
+  #then in budget class, it could call on each depts' @expenses_by_empolyee array?
+  # and make a hash with { department => [employee, total_expenses], [employee, total_expenses]}
 
   # or can we use #expense method inside? 
   #=> no, departments can have their own expenses, while employees can make expenses for the dept too
 
-
-  # iterate through empolyees to calculate all make_expense for that employee
-  # key=empolyee value=expense_anmount
-
-  # make helper to pull new_expense_amount out of key/value
-  
+  # I feel like I'm overcomplicating this.
 end
