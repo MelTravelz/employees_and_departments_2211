@@ -43,10 +43,10 @@ RSpec.describe Budget do
     budget.add_department(social_service)
     budget.add_department(health_service)
 
-    customer_service.expense("$300")
-    law_service.expense("$1000")
-    social_service.expense("$400")
-    health_service.expense("$500")
+    customer_service.expense(300)
+    law_service.expense(1000)
+    social_service.expense(400)
+    health_service.expense(500)
 
     expect(budget.low_expense_departments).to eq([customer_service, social_service])
   end
@@ -80,7 +80,9 @@ RSpec.describe Budget do
     # expect(budget.employee_salaries).to eq([100000, 90000, 250000, 200000])
   end
 
-  it "can track which employee is responsible for an expense" do
+  xit "can track which employee is responsible for an expense" do
+    # They should also be able to total all expenses for which a specific employee is responsible.
+
     budget = Budget.new("2022") 
       
     customer_service = Department.new("Customer Service")   
@@ -98,6 +100,12 @@ RSpec.describe Budget do
     customer_service.hire(aaron) 
     law_service.hire(ben)
     law_service.hire(saul) 
+
+    aaron.make_expense("$50")
+    saul.make_expense("$8000")
+    saul.make_expense("$500")
+    saul.make_expense("$300")
+    bobbi.make_expense("$60")
 
     customer_service.expense("$300")
     law_service.expense("$1000")

@@ -15,7 +15,7 @@ class Department
   end
 
   def expense(new_expense_amount)
-    @expenses += new_expense_amount.delete_prefix("$").to_i
+    @expenses += new_expense_amount
   end
 
   
