@@ -16,4 +16,9 @@ class Budget
       dept.expenses < 500
     end
   end
+
+  def employee_salaries
+    require 'pry'; binding.pry
+  end
+  
 end

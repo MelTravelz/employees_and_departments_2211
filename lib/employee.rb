@@ -14,7 +14,4 @@ class Employee
     return self
   end
 
-  def employee_salaries
-    require 'pry'; binding.pry
-  end
 end
