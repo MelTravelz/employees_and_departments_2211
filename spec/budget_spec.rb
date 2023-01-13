@@ -46,7 +46,7 @@ RSpec.describe Budget do
     customer_service.expense("$300")
     law_service.expense("$1000")
     social_service.expense("$400")
-    health_service.expense("$700")
+    health_service.expense("$500")
 
     expect(budget.low_expense_departments).to eq([customer_service, social_service])
 end

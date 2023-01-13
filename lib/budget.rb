@@ -11,4 +11,9 @@ class Budget
     departments.push(department)
   end
 
+  def low_expense_departments
+    departments.find_all do |dept| 
+      dept.expenses < 500
+    end
+  end
 end
