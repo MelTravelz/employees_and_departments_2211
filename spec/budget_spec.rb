@@ -82,7 +82,6 @@ RSpec.describe Budget do
 
   xit "can track which employee is responsible for an expense" do
     # They should also be able to total all expenses for which a specific employee is responsible.
-
     budget = Budget.new("2022") 
       
     customer_service = Department.new("Customer Service")   
@@ -101,14 +100,14 @@ RSpec.describe Budget do
     law_service.hire(ben)
     law_service.hire(saul) 
 
-    aaron.make_expense("$50")
-    saul.make_expense("$8000")
-    saul.make_expense("$500")
-    saul.make_expense("$300")
-    bobbi.make_expense("$60")
+    # customer_service.employee_make_expense(bobbi, 50)
+    # saul.make_expense("$8000")
+    # saul.make_expense("$500")
+    # saul.make_expense("$300")
+    # bobbi.make_expense("$60")
 
-    customer_service.expense("$300")
-    law_service.expense("$1000")
+    # customer_service.expense("$300")
+    # law_service.expense("$1000")
 
     expect().to eq()
   end

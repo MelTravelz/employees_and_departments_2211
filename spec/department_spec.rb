@@ -40,6 +40,9 @@ RSpec.describe Department do
 
     expect(customer_service.expenses).to eq(0)
   end
+  # Note: I an unclear if a new attribute is added later if it needs its own test
+  # or if I can add it to the "has attributes" test. I decided to leave it here for now 
+  # to ensure instructors can see it was tested for in the order of the interaction pattern. 
 
   it "can add an #expense to its expenses" do
     customer_service = Department.new("Customer Service") 
@@ -55,5 +58,7 @@ RSpec.describe Department do
     
     expect(customer_service.expenses).to eq(125)
   end
+
+
 
 end
