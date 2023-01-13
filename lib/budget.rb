@@ -25,12 +25,8 @@ class Budget
         hash[employee] = employee.salary
       end
     end
-
+    
     hash
-
-    # require 'pry'; binding.pry
-    # departments[0].employees[0] => employee object
-    # departments[0].employees[0].salary => 200000
   end
 
 end
