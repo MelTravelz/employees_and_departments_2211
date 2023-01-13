@@ -12,7 +12,7 @@ RSpec.describe Budget do
   end
 
   it "has attributes" do
-    budget = Budget.new(year)   
+    budget = Budget.new("2022")   
 
     expect(budget.year).to eq(2022)
   end
