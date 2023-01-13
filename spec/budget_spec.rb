@@ -15,6 +15,13 @@ RSpec.describe Budget do
     budget = Budget.new("2022")   
 
     expect(budget.year).to eq(2022)
+    expect(budget.all_departments).to eq([])
   end
+
+  # it "can list #all_departments" do
+  #   budget = Budget.new("2022")   
+
+  #   expect(budget.all_departments).to eq([])
+  # end
 
 end
